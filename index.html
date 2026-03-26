@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Денис Гончаров — студент ПГНИУ (ПМИ), Python, Telegram-боты, веб. Пермь. GitHub: zab1yak." />
+  <title>Денис Гончаров — портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">ДГ</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Навыки</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a
+        class="header-github"
+        href="https://github.com/zab1yak"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Профиль на GitHub"
+        title="GitHub"
+      >
+        <svg class="header-github__icon" viewBox="0 0 24 24" aria-hidden="true" width="22" height="22">
+          <path
+            fill="currentColor"
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
+      </a>
+      <button type="button" class="theme-toggle" aria-label="Переключить тему" title="Тема">
+        <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
+        <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
+      </button>
+      <a class="btn btn--small btn--outline nav-cta" href="#contact">Связаться</a>
+    </div>
+    <button type="button" class="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer" hidden>
+    <nav class="mobile-drawer__nav">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Навыки</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal is-visible">Пермь · ПГНИУ · ПМИ · 2 курс</p>
+        <h1 class="hero__title reveal is-visible">
+          <span class="hero__hi">Привет, я</span>
+          <span class="hero__name">Денис Гончаров</span>
+        </h1>
+        <p class="hero__lead reveal is-visible">
+          Студент направления <strong>«Прикладная математика и информатика»</strong> (экономический факультет).
+          Разрабатываю <strong>Telegram-ботов</strong>, <strong>сайты</strong> и учусь превращать идеи в рабочий код.
+        </p>
+        <div class="hero__actions reveal is-visible">
+          <a class="btn btn--primary" href="#projects">
+            Смотреть проекты
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/zab1yak" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn--ghost" href="#about">Обо мне</a>
+        </div>
+      </div>
+
+      <!-- Эффект в духе CodePen: 3D-плитки + параллакс от мыши -->
+      <div class="tilt-wrap" id="tilt-wrap">
+        <div class="tilt-app" id="tilt-app">
+          <div class="tiles">
+            <a href="#about" class="tile" style="--tile-accent: #5eead4" data-tile="01">
+              <header>Обо мне</header>
+            </a>
+            <a href="#projects" class="tile" style="--tile-accent: #a78bfa" data-tile="02">
+              <header>Проекты</header>
+            </a>
+            <a href="#skills" class="tile" style="--tile-accent: #fb923c" data-tile="03">
+              <header>Навыки</header>
+            </a>
+            <a href="#contact" class="tile" style="--tile-accent: #f472b6" data-tile="04">
+              <header>Связь</header>
+            </a>
+          </div>
+        </div>
+        <p class="tilt-hint reveal is-visible">Наведи на плитки — блок реагирует на курсор</p>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about">
+      <div class="section__inner">
+        <h2 class="section__title reveal">Обо мне</h2>
+        <div class="about__layout">
+          <div class="about__text reveal">
+            <p>
+              Учусь в <strong>ПГНИУ</strong> на экономическом факультете, направление
+              <strong>«Прикладная математика и информатика»</strong> (2 курс). В разработке больше всего практики на
+              <strong>Python</strong>: <strong>Telegram-боты</strong> для учебы и своих задач (часть ранних работ не сохранилась —
+              с тех пор выкладываю код на <a class="inline-link" href="https://github.com/zab1yak" target="_blank" rel="noopener noreferrer">GitHub</a>).
+            </p>
+            <p>
+              С однокурсниками делали <strong>приложение для учёта посещаемости</strong> для нужд университета.
+              Есть опыт <strong>вёрстки и простых сайтов</strong>, учебные проекты на <strong>C++</strong>.
+              Проходил <strong>учебную практику в GreenData</strong> — познакомился с процессами в IT-компании.
+            </p>
+            <p class="about__tagline">
+              Открыт к заказам на ботов, скрипты и лендинги · пишу аккуратно и в срок.
+            </p>
+          </div>
+          <ul class="about__highlights reveal">
+            <li><span>ПГНИУ</span> ПМИ, экономический факультет</li>
+            <li><span>GreenData</span> Учебная практика</li>
+            <li><span>GitHub</span> @zab1yak</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--skills" id="skills">
+      <div class="section__inner">
+        <h2 class="section__title reveal">Навыки</h2>
+        <p class="section__subtitle reveal">Стек, с которым работаю чаще всего</p>
+        <div class="skills-cloud reveal">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Telegram Bot API</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Алгоритмы</span>
+          <span class="skill-pill">Командная разработка</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--projects" id="projects">
+      <div class="section__inner">
+        <h2 class="section__title reveal">Проекты</h2>
+        <p class="section__subtitle reveal">
+          Открытые репозитории на GitHub и учебные работы — по мере появления демо можно добавлять ссылки «Live».
+        </p>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-card__meta">Python · Telegram</div>
+            <h3 class="project-card__title">movie_bot</h3>
+            <p class="project-card__desc">
+              Бот в Telegram: подбор фильма по жанрам или настроению. Практика с API и логикой сценариев.
+            </p>
+            <div class="project-card__links">
+              <a class="link-arrow" href="https://github.com/zab1yak/movie_bot" target="_blank" rel="noopener noreferrer">Код на GitHub</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__meta">ПГНИУ · Команда</div>
+            <h3 class="project-card__title">Учёт посещаемости</h3>
+            <p class="project-card__desc">
+              Приложение для университета совместно с однокурсниками: учёт и организация данных о посещениях.
+            </p>
+            <div class="project-card__links">
+              <span class="project-card__muted">Репозиторий не публиковался</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__meta">C++ · Учёба</div>
+            <h3 class="project-card__title">domino</h3>
+            <p class="project-card__desc">
+              Итоговая работа по курсу «Алгоритмизация и программирование» — логика и структура кода на C++.
+            </p>
+            <div class="project-card__links">
+              <a class="link-arrow" href="https://github.com/zab1yak/domino" target="_blank" rel="noopener noreferrer">Код на GitHub</a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__meta">Практика</div>
+            <h3 class="project-card__title">GreenData</h3>
+            <p class="project-card__desc">
+              Учебная практика в компании — знакомство с корпоративной разработкой и процессами.
+            </p>
+            <div class="project-card__links">
+              <span class="project-card__muted">Без публичного репозитория</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-card__meta">Веб · этот сайт</div>
+            <h3 class="project-card__title">Портфолио</h3>
+            <p class="project-card__desc">
+              Статическая вёрстка: адаптив, тёмная/светлая тема, анимации и интерактив в духе референсов.
+            </p>
+            <div class="project-card__links">
+              <a class="link-arrow" href="https://github.com/zab1yak/my-profile" target="_blank" rel="noopener noreferrer">Профиль README</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="section__inner section__inner--narrow">
+        <h2 class="section__title reveal">Контакты</h2>
+        <p class="section__subtitle reveal">
+          Напишите, если нужен бот, скрипт или сайт. Укажите в письме сроки и задачу — отвечу в ближайшее время.
+        </p>
+        <form class="contact-form reveal" action="https://formsubmit.co/zab1rabota@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="С портфолио: сообщение от клиента" />
+          <input type="hidden" name="_captcha" value="false" />
+          <label class="form-field">
+            <span>Имя</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться" />
+          </label>
+          <label class="form-field">
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <label class="form-field">
+            <span>Сообщение</span>
+            <textarea name="message" rows="5" required placeholder="Кратко опишите задачу"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full">
+            Отправить
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </button>
+        </form>
+        <p class="contact-alt reveal">
+          Или напрямую:
+          <a class="inline-link" href="https://t.me/zab1l" target="_blank" rel="noopener noreferrer">Telegram @zab1l</a>
+          ·
+          <a class="inline-link" href="https://github.com/zab1yak" target="_blank" rel="noopener noreferrer">GitHub</a>
+          ·
+          <a class="inline-link" href="mailto:zab1rabota@gmail.com">zab1rabota@gmail.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Денис Гончаров · Пермь</p>
+    <p class="site-footer__note">Портфолио — статический сайт, готов к публикации на GitHub Pages</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
