@@ -3,18 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Денис Гончаров — студент ПГНИУ (ПМИ), Python, Telegram-боты, веб. Пермь. GitHub: zab1yak." />
+  <meta name="description" content="Денис Гончаров — студент ПГНИУ (ПМИ), Python, Telegram-боты, веб. Пермь." />
   <title>Денис Гончаров — портфолио</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div id="page-loader" class="page-loader" aria-live="polite" aria-busy="true">
+    <div class="page-loader__inner">
+      <div class="page-loader__orbit" aria-hidden="true">
+        <span class="page-loader__cap"></span>
+      </div>
+      <p class="page-loader__text">Загрузка</p>
+    </div>
+  </div>
+
+  <div class="page-bg" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="logo" href="#top">ДГ</a>
+    <div class="header-start">
+      <button type="button" class="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
     <nav class="nav" aria-label="Основная навигация">
       <a href="#about">Обо мне</a>
       <a href="#skills">Навыки</a>
@@ -41,11 +58,7 @@
         <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
         <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
       </button>
-      <a class="btn btn--small btn--outline nav-cta" href="#contact">Связаться</a>
     </div>
-    <button type="button" class="nav-burger" aria-label="Открыть меню" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </header>
 
   <div class="mobile-drawer" id="mobile-drawer" hidden>
@@ -66,6 +79,7 @@
           <span class="hero__hi">Привет, я</span>
           <span class="hero__name">Денис Гончаров</span>
         </h1>
+        <p class="hero-typewriter reveal is-visible" id="hero-typewriter">Пишу боты, сайты и скрипты.</p>
         <p class="hero__lead reveal is-visible">
           Студент направления <strong>«Прикладная математика и информатика»</strong> (экономический факультет).
           Разрабатываю <strong>Telegram-ботов</strong>, <strong>сайты</strong> и учусь превращать идеи в рабочий код.
@@ -79,27 +93,6 @@
           <a class="btn btn--ghost" href="#about">Обо мне</a>
         </div>
       </div>
-
-      <!-- Эффект в духе CodePen: 3D-плитки + параллакс от мыши -->
-      <div class="tilt-wrap" id="tilt-wrap">
-        <div class="tilt-app" id="tilt-app">
-          <div class="tiles">
-            <a href="#about" class="tile" style="--tile-accent: #5eead4" data-tile="01">
-              <header>Обо мне</header>
-            </a>
-            <a href="#projects" class="tile" style="--tile-accent: #a78bfa" data-tile="02">
-              <header>Проекты</header>
-            </a>
-            <a href="#skills" class="tile" style="--tile-accent: #fb923c" data-tile="03">
-              <header>Навыки</header>
-            </a>
-            <a href="#contact" class="tile" style="--tile-accent: #f472b6" data-tile="04">
-              <header>Связь</header>
-            </a>
-          </div>
-        </div>
-        <p class="tilt-hint reveal is-visible">Наведи на плитки — блок реагирует на курсор</p>
-      </div>
     </section>
 
     <section class="section section--about" id="about">
@@ -109,24 +102,34 @@
           <div class="about__text reveal">
             <p>
               Учусь в <strong>ПГНИУ</strong> на экономическом факультете, направление
-              <strong>«Прикладная математика и информатика»</strong> (2 курс). В разработке больше всего практики на
-              <strong>Python</strong>: <strong>Telegram-боты</strong> для учебы и своих задач (часть ранних работ не сохранилась —
-              с тех пор выкладываю код на <a class="inline-link" href="https://github.com/zab1yak" target="_blank" rel="noopener noreferrer">GitHub</a>).
+              <strong>«Прикладная математика и информатика»</strong> (2 курс). Пишу код на
+              <strong>Python</strong>, <strong>C++</strong>, <strong>C#</strong>, <strong>F#</strong> и <strong>R</strong>
+              — от учебных задач и ботов до небольших приложений и анализа данных.
             </p>
             <p>
               С однокурсниками делали <strong>приложение для учёта посещаемости</strong> для нужд университета.
-              Есть опыт <strong>вёрстки и простых сайтов</strong>, учебные проекты на <strong>C++</strong>.
-              Проходил <strong>учебную практику в GreenData</strong> — познакомился с процессами в IT-компании.
+              Есть опыт <strong>вёрстки и простых сайтов</strong>. Проходил
+              <strong>учебную практику в GreenData</strong> — увидел изнутри, как устроены процессы в IT-компании.
+            </p>
+            <p>
+              <strong>Награды и активности:</strong> благодарность кафедры информационных систем и математических методов в экономике
+              (ПГНИУ, 2023); участие в проекте «Технологии суверенитета» X фестиваля «Переменим Пермь» (2023); призёр
+              открытой краевой олимпиады по информатике (Пермский политех, 2023); сертификат проекта «Открытый университет»
+              Пермского политеха за подготовку к ЕГЭ и активное участие (2024). Есть
+              <a class="inline-link" href="https://stepik.org/course/58852/promo" target="_blank" rel="noopener noreferrer"
+                >сертификат курса на Stepik</a
+              >
+              (программирование и смежные темы).
+            </p>
+            <p>
+              <strong>Спорт и команда:</strong> веду активный образ жизни и с удовольствием подключаюсь к корпоративному спорту —
+              турнирам, зарядкам, лыжам, залу или любому формату, где важны дух команды и здоровый ритм. Готов влиться в
+              спортивную жизнь компании в любом направлении, где нужны надёжные участники.
             </p>
             <p class="about__tagline">
               Открыт к заказам на ботов, скрипты и лендинги · пишу аккуратно и в срок.
             </p>
           </div>
-          <ul class="about__highlights reveal">
-            <li><span>ПГНИУ</span> ПМИ, экономический факультет</li>
-            <li><span>GreenData</span> Учебная практика</li>
-            <li><span>GitHub</span> @zab1yak</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -134,17 +137,20 @@
     <section class="section section--skills" id="skills">
       <div class="section__inner">
         <h2 class="section__title reveal">Навыки</h2>
-        <p class="section__subtitle reveal">Стек, с которым работаю чаще всего</p>
+        <p class="section__subtitle reveal">Стек и ссылки на официальные ресурсы</p>
         <div class="skills-cloud reveal">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">Telegram Bot API</span>
-          <span class="skill-pill">C++</span>
-          <span class="skill-pill">HTML</span>
-          <span class="skill-pill">CSS</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">Алгоритмы</span>
-          <span class="skill-pill">Командная разработка</span>
+          <a class="skill-pill" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a>
+          <a class="skill-pill" href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer">R</a>
+          <a class="skill-pill" href="https://learn.microsoft.com/dotnet/csharp/" target="_blank" rel="noopener noreferrer">C#</a>
+          <a class="skill-pill" href="https://learn.microsoft.com/dotnet/fsharp/" target="_blank" rel="noopener noreferrer">F#</a>
+          <a class="skill-pill" href="https://isocpp.org/" target="_blank" rel="noopener noreferrer">C++</a>
+          <a class="skill-pill" href="https://core.telegram.org/bots/api" target="_blank" rel="noopener noreferrer">Telegram Bot API</a>
+          <a class="skill-pill" href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">HTML</a>
+          <a class="skill-pill" href="https://www.w3.org/Style/CSS/" target="_blank" rel="noopener noreferrer">CSS</a>
+          <a class="skill-pill" href="https://tc39.es/ecma262/" target="_blank" rel="noopener noreferrer">JavaScript</a>
+          <a class="skill-pill" href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a>
+          <a class="skill-pill" href="https://ru.wikipedia.org/wiki/Алгоритм" target="_blank" rel="noopener noreferrer">Алгоритмы</a>
+          <a class="skill-pill" href="https://git-scm.com/book/ru/v2" target="_blank" rel="noopener noreferrer">Командная разработка</a>
         </div>
       </div>
     </section>
@@ -193,7 +199,7 @@
               Учебная практика в компании — знакомство с корпоративной разработкой и процессами.
             </p>
             <div class="project-card__links">
-              <span class="project-card__muted">Без публичного репозитория</span>
+              <span class="project-card__creative">Опыт «изнутри» — без витрины кода, зато с пониманием, как всё устроено в проде.</span>
             </div>
           </article>
           <article class="project-card reveal">
