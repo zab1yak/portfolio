@@ -21,7 +21,6 @@
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --font-ui: "Concert One", system-ui, sans-serif;
   --font-card-title: "Frank Ruhl Libre", Georgia, serif;
-  --font-quote: "Crimson Text", Georgia, serif;
   --font-label: "Arvo", Georgia, serif;
 
   --bg-image: url("https://i.ytimg.com/vi/uh_J97cdvd8/maxresdefault.jpg");
@@ -732,14 +731,18 @@ body.is-drawer-open .nav-burger span:nth-child(3) {
 }
 
 .about__tagline {
-  font-family: var(--font-quote);
-  font-size: 1.08rem;
-  font-style: italic;
-  font-weight: 600;
-  color: var(--text) !important;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: color-mix(in srgb, var(--text) 96%, var(--accent)) !important;
   border-left: 3px solid var(--accent);
-  padding-left: 1rem;
+  padding: 0.65rem 0 0.65rem 1rem;
   margin-top: 1.5rem !important;
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 /* Skills */
@@ -935,10 +938,10 @@ a.skill-pill:focus-visible {
 }
 
 .site-footer__note {
-  font-family: var(--font-quote);
+  font-family: var(--font-body);
   font-size: 0.82rem;
-  font-style: italic;
-  opacity: 0.75;
+  font-style: normal;
+  opacity: 0.8;
 }
 
 main {
