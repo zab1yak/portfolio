@@ -1,23 +1,46 @@
-# Портфолио — Денис Гончаров
+# Портфолио · Денис Гончаров
 
-Статический сайт: HTML, CSS, JS. Эффект 3D-плиток вдохновлён [CodePen «Tilted Tiles» / @keyframers](https://codepen.io/Prakash286/pen/bGRdqLw).
+Статический сайт-визитка: навыки, проекты, контакты. Студент **ПГНИУ** (направление ПМИ), Пермь.
 
-## Что заменить перед публикацией
+**Сайт онлайн:** [zab1yak.github.io/portfolio](https://zab1yak.github.io/portfolio/)
 
-1. **Форма** — в `index.html` уже указан [FormSubmit](https://formsubmit.co): письма идут на `zab1rabota@gmail.com`. При **первой** отправке с сайта сервис пришлёт на эту почту письмо с подтверждением — открой ссылку из письма, иначе форма не заработает.
-2. **Проекты** — при необходимости обнови ссылки на GitHub / демо в блоке проектов.
+---
 
-## Бесплатная публикация (GitHub Pages)
+## Обо мне
 
-1. Создай репозиторий на GitHub и залей содержимое папки `goncharov-portfolio` (корень репозитория: `index.html`, папки `css/`, `js/`).
-2. В настройках репозитория: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, ветка `main`, папка `/ (root)`.
-3. Через минуту сайт будет доступен по адресу вида `https://<username>.github.io/<repo>/`.
+- Разработка **Telegram-ботов** (Python), **вёрстка** и небольшие сайты, учебные проекты на **C++**
+- Учебная практика в **GreenData**
+- Командный проект: приложение для **учёта посещаемости** (ПГНИУ)
+- Открыт к заказам на ботов, скрипты и лендинги
 
-Если репозиторий называется `<username>.github.io`, сайт откроется на `https://<username>.github.io/` без подпути.
+**Контакты:** [Telegram @zab1l](https://t.me/zab1l) · [GitHub @zab1yak](https://github.com/zab1yak) · `zab1rabota@gmail.com`
 
-## Локальный просмотр
+---
 
-Открой `index.html` в браузере или запусти простой сервер из папки проекта, например:
+## Стек
+
+HTML, CSS, JavaScript (без сборщиков). Шрифты: Syne, DM Sans. Тёмная / светлая тема, адаптивная вёрстка.
+
+Интерактив в hero вдохновлён [CodePen «Tilted Tiles»](https://codepen.io/Prakash286/pen/bGRdqLw) (keyframers).
+
+---
+
+## Структура репозитория
+
+```
+├── index.html      # разметка
+├── css/style.css   # стили
+├── js/main.js      # тема, меню, анимации
+└── README.md
+```
+
+Форма обратной связи: [FormSubmit](https://formsubmit.co) → `zab1rabota@gmail.com` (при первой отправке нужно подтвердить почту по письму от сервиса).
+
+---
+
+## Локальный запуск
+
+Открой `index.html` в браузере или из папки проекта:
 
 ```bash
 npx --yes serve .
@@ -25,4 +48,10 @@ npx --yes serve .
 
 ---
 
-Идеи оформления: [benscott.dev](https://benscott.dev/), [safetpojskic.com](https://safetpojskic.com/).
+## Референсы дизайна
+
+[benscott.dev](https://benscott.dev/) · [safetpojskic.com](https://safetpojskic.com/)
+
+---
+
+*Репозиторий: [github.com/zab1yak/portfolio](https://github.com/zab1yak/portfolio)*
