@@ -19,6 +19,7 @@
       loaderLoading: "Загрузка",
       heroEyebrow: "Пермь · ПГНИУ · ПМИ · 2 курс",
       heroHi: "Привет, я",
+      heroName: "Денис Гончаров",
       heroTypewriter: "Пишу боты, сайты и скрипты.",
       heroLead:
         "Студент направления <strong>«Прикладная математика и информатика»</strong> (экономический факультет). Разрабатываю <strong>Telegram-ботов</strong>, <strong>сайты</strong> и учусь превращать идеи в рабочий код.",
@@ -94,6 +95,7 @@
       loaderLoading: "Loading",
       heroEyebrow: "Perm · PSU · Applied Math & CS · Year 2",
       heroHi: "Hi, I'm",
+      heroName: "Denis Goncharov",
       heroTypewriter: "I build bots, sites, and scripts.",
       heroLead:
         "Student of <strong>Applied Mathematics and Informatics</strong> (School of Economics). I build <strong>Telegram bots</strong>, <strong>websites</strong>, and turn ideas into working code.",

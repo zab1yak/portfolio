@@ -732,17 +732,15 @@ body.is-drawer-open .nav-burger span:nth-child(3) {
 
 .about__tagline {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
+  line-height: 1.55;
   color: color-mix(in srgb, var(--text) 96%, var(--accent)) !important;
   border-left: 3px solid var(--accent);
-  padding: 0.65rem 0 0.65rem 1rem;
+  padding-left: 1rem;
   margin-top: 1.5rem !important;
-  background: color-mix(in srgb, var(--surface) 55%, transparent);
-  border-radius: 0 0.5rem 0.5rem 0;
+  letter-spacing: 0.01em;
 }
 
 /* Skills */
@@ -939,9 +937,10 @@ a.skill-pill:focus-visible {
 
 .site-footer__note {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-style: normal;
-  opacity: 0.8;
+  font-weight: 400;
+  opacity: 0.82;
 }
 
 main {
