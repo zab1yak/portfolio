@@ -4,16 +4,105 @@
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   const HEADER_OFFSET = 72;
+  const LOADER_MIN_MS = 2000;
+
+  const I18N = window.PORTFOLIO_I18N || { ru: {}, en: {} };
+
+  function getStoredLang() {
+    var s = localStorage.getItem("portfolioLang");
+    if (s === "en" || s === "ru") return s;
+    return "ru";
+  }
+
+  function setStoredLang(lang) {
+    localStorage.setItem("portfolioLang", lang);
+  }
+
+  function applyPortfolioLang(lang) {
+    if (lang !== "en" && lang !== "ru") lang = "ru";
+    var t = I18N[lang];
+    if (!t) return;
+
+    document.documentElement.lang = lang === "en" ? "en" : "ru";
+
+    var meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", t.metaDescription);
+    var titleEl = document.querySelector("title");
+    if (titleEl) titleEl.textContent = t.title;
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (key && t[key] != null) el.textContent = t[key];
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-html");
+      if (key && t[key] != null) el.innerHTML = t[key];
+    });
+
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-placeholder");
+      if (key && t[key] != null) el.setAttribute("placeholder", t[key]);
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-aria");
+      if (key && t[key] != null) el.setAttribute("aria-label", t[key]);
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-aria-label");
+      if (key && t[key] != null) el.setAttribute("aria-label", t[key]);
+    });
+
+    var subj = document.getElementById("form-subject");
+    if (subj && t.formSubject) subj.value = t.formSubject;
+
+    var algo = document.getElementById("skill-link-algorithms");
+    if (algo && t.wikiAlgorithms) algo.href = t.wikiAlgorithms;
+    var team = document.getElementById("skill-link-team");
+    if (team && t.wikiTeam) team.href = t.wikiTeam;
+
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      var isActive = btn.getAttribute("data-set-lang") === lang;
+      btn.classList.toggle("lang-switch__btn--active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    setupHeroTypewriter();
+  }
+
+  function setupHeroTypewriter() {
+    var tw = document.getElementById("hero-typewriter");
+    if (!tw) return;
+    if (prefersReducedMotion) {
+      tw.style.animation = "none";
+      tw.style.width = "auto";
+      tw.style.borderRight = "none";
+      tw.style.overflow = "visible";
+      return;
+    }
+    var text = tw.textContent.trim();
+    var len = Math.max(1, Array.from(text).length);
+    tw.style.animation = "none";
+    tw.style.width = "0";
+    tw.style.overflow = "hidden";
+    tw.style.borderRight = "";
+    tw.style.setProperty("--tw-steps", String(len));
+    void tw.offsetHeight;
+    tw.style.removeProperty("animation");
+  }
+
+  applyPortfolioLang(getStoredLang());
 
   /* --- Page loader --- */
   var loader = document.getElementById("page-loader");
   if (loader && !prefersReducedMotion) {
     document.body.classList.add("is-loading");
     var loaderStart = Date.now();
-    var minShow = 900;
     function hideLoader() {
       var elapsed = Date.now() - loaderStart;
-      var wait = Math.max(0, minShow - elapsed);
+      var wait = Math.max(0, LOADER_MIN_MS - elapsed);
       window.setTimeout(function () {
         loader.classList.add("page-loader--done");
         document.body.classList.remove("is-loading");
@@ -33,6 +122,16 @@
     loader.setAttribute("aria-hidden", "true");
     loader.setAttribute("aria-busy", "false");
   }
+
+  /* --- Language toggle --- */
+  document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var lang = btn.getAttribute("data-set-lang");
+      if (lang !== "en" && lang !== "ru") return;
+      setStoredLang(lang);
+      applyPortfolioLang(lang);
+    });
+  });
 
   /* --- Theme --- */
   const root = document.documentElement;
@@ -118,19 +217,6 @@
         document.body.classList.remove("is-drawer-open");
       });
     });
-  }
-
-  /* --- Typing line (hero) --- */
-  var tw = document.getElementById("hero-typewriter");
-  if (tw && !prefersReducedMotion) {
-    var text = tw.textContent.trim();
-    var len = Array.from(text).length;
-    tw.style.setProperty("--tw-steps", String(Math.max(1, len)));
-  } else if (tw) {
-    tw.style.animation = "none";
-    tw.style.width = "auto";
-    tw.style.borderRight = "none";
-    tw.style.overflow = "visible";
   }
 
   /* --- Scroll reveal --- */
