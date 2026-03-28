@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Космические камни — мини-игра</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <div class="app">
+    <div class="layout-main">
+      <aside class="layout-sidebar">
+        <header class="header">
+          <h1>Космические камни</h1>
+        </header>
+
+        <p class="hint hint--rules">
+          <kbd>←</kbd><kbd>→</kbd> или <kbd>A</kbd><kbd>D</kbd> — поворот ·
+          <kbd>↑</kbd> или <kbd>W</kbd> — двигатель ·
+          <kbd>пробел</kbd> — выстрел · <kbd>Esc</kbd> — пауза
+        </p>
+
+        <div class="panel panel--controls">
+          <label class="field">
+            <span>Сложность</span>
+            <select id="difficulty-select" aria-label="Сложность">
+              <option value="chill">Спокойный полёт</option>
+              <option value="normal" selected>Обычный</option>
+              <option value="hard">Астероидный дождь</option>
+            </select>
+          </label>
+          <button type="button" id="btn-start" class="btn btn--primary btn--start-wide">Старт!</button>
+        </div>
+
+        <div class="side-stats panel" aria-label="Статистика">
+          <div class="stats stats--compact">
+            <div class="stat-bubble">Счёт<br /><strong id="score">0</strong></div>
+            <div class="stat-bubble">Жизни<br /><strong id="lives">3</strong></div>
+            <div class="stat-bubble">Волна<br /><strong id="wave">1</strong></div>
+            <div class="stat-bubble">Рекорд<br /><strong id="best">0</strong></div>
+          </div>
+          <div class="ammo-panel" aria-label="Патроны">
+            <div class="ammo-panel__row">
+              <span class="ammo-panel__label">Патроны</span>
+              <span class="ammo-panel__count"><strong id="ammo">10</strong>/10</span>
+            </div>
+            <div class="ammo-bar" title="Перезарядка: 1 патрон каждые 0,5 с (до 10 в магазине)">
+              <div id="ammo-fill" class="ammo-bar__inner"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="layout-game" id="layout-game">
+        <div class="game-stage" id="game-stage">
+          <div class="canvas-wrap">
+            <canvas id="game" aria-label="Игровое поле"></canvas>
+            <div id="overlay" class="overlay hidden">
+              <p id="overlay-text" class="overlay__text"></p>
+              <button type="button" id="btn-overlay" class="btn btn--primary btn--overlay-big">Играть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -41,28 +41,21 @@
       skillTeam: "Командная разработка",
       projectsTitle: "Проекты",
       projectsSubtitle:
-        "Открытые репозитории на GitHub и учебные работы — по мере появления демо можно добавлять ссылки «Live».",
-      projMovieMeta: "Python · Telegram",
-      projMovieDesc:
-        "Бот в Telegram: подбор фильма по жанрам или настроению. Практика с API и логикой сценариев.",
-      projMovieLink: "Код на GitHub",
-      projAttMeta: "ПГНИУ · Команда",
-      projAttTitle: "Учёт посещаемости",
-      projAttDesc:
-        "Приложение для университета совместно с однокурсниками: учёт и организация данных о посещениях.",
-      projAttMuted: "Репозиторий не публиковался",
-      projDominoMeta: "C++ · Учёба",
-      projDominoDesc:
-        "Итоговая работа по курсу «Алгоритмизация и программирование» — логика и структура кода на C++.",
-      projGdMeta: "Практика",
-      projGdDesc: "Учебная практика в компании — знакомство с корпоративной разработкой и процессами.",
-      projGdNote:
-        "Опыт «изнутри» — без витрины кода, зато с пониманием, как всё устроено в проде.",
-      projPortMeta: "Веб · этот сайт",
-      projPortTitle: "Портфолио",
-      projPortDesc:
-        "Статическая вёрстка: адаптив, тёмная/светлая тема, анимации и интерактив в духе референсов.",
-      projPortLink: "Профиль README",
+        "Браузерные игры на чистом HTML, CSS и JavaScript — каждая в своём репозитории с README. Демо через GitHub Pages.",
+      projLinkLive: "Играть online",
+      projLinkCode: "Код на GitHub",
+      projMineMeta: "HTML · CSS · JavaScript",
+      projMineTitle: "Сапёр",
+      projMineDesc:
+        "Классическое поле с минами: три сложности, таймер, флаги, безопасный первый ход. Логика на чистом JS.",
+      projSnakeMeta: "Canvas · JavaScript",
+      projSnakeTitle: "Змейка",
+      projSnakeDesc:
+        "Плавная змейка на canvas: счёт, лучший результат в localStorage, аккуратный UI на русском.",
+      projAstMeta: "Canvas · JavaScript",
+      projAstTitle: "Астероиды",
+      projAstDesc:
+        "Аркада: корабль, стрельба, волны астероидов, усложнение и игровые механики на JS.",
       contactTitle: "Контакты",
       contactSubtitle:
         "Напишите, если нужен бот, скрипт или сайт. Укажите в письме сроки и задачу — отвечу в ближайшее время.",
@@ -117,28 +110,21 @@
       skillTeam: "Team workflows",
       projectsTitle: "Projects",
       projectsSubtitle:
-        "Public GitHub repos and coursework — I’ll add “Live” demos as they appear.",
-      projMovieMeta: "Python · Telegram",
-      projMovieDesc:
-        "Telegram bot: pick a film by genre or mood. Practice with APIs and conversation flow.",
-      projMovieLink: "Code on GitHub",
-      projAttMeta: "PSU · Team",
-      projAttTitle: "Attendance tracker",
-      projAttDesc:
-        "University project with classmates: tracking and organising attendance data.",
-      projAttMuted: "Repository not published",
-      projDominoMeta: "C++ · Coursework",
-      projDominoDesc:
-        "Final project for “Algorithms & programming” — logic and structure in C++.",
-      projGdMeta: "Internship",
-      projGdDesc: "Company internship — exposure to corporate development and delivery.",
-      projGdNote:
-        "Behind-the-scenes experience — no public repo, but a feel for how production actually runs.",
-      projPortMeta: "Web · this site",
-      projPortTitle: "Portfolio",
-      projPortDesc:
-        "Static site: responsive layout, dark/light theme, motion and UI inspired by references.",
-      projPortLink: "Profile README",
+        "Browser games in plain HTML, CSS, and JavaScript — each in its own repo with a README. Demos on GitHub Pages.",
+      projLinkLive: "Play online",
+      projLinkCode: "Code on GitHub",
+      projMineMeta: "HTML · CSS · JavaScript",
+      projMineTitle: "Minesweeper",
+      projMineDesc:
+        "Classic minesweeper: three board sizes, timer, flags, safe first click. Pure JS logic.",
+      projSnakeMeta: "Canvas · JavaScript",
+      projSnakeTitle: "Snake",
+      projSnakeDesc:
+        "Smooth snake on canvas: scoring, best score in localStorage, Russian UI.",
+      projAstMeta: "Canvas · JavaScript",
+      projAstTitle: "Asteroids",
+      projAstDesc:
+        "Arcade shooter: ship, bullets, asteroid waves, scaling difficulty — all in JS.",
       contactTitle: "Contact",
       contactSubtitle:
         "Reach out if you need a bot, script, or site. Mention timeline and scope — I’ll reply as soon as I can.",

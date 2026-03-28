@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Морская змейка — мини-игра</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <div class="app">
+    <div class="layout-main">
+      <aside class="layout-sidebar">
+        <header class="header">
+          <h1>Морская змейка</h1>
+        </header>
+
+        <p class="hint hint--rules">
+          <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> или <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> — плыть ·
+          <kbd>пробел</kbd> — пауза · не врежься в риф и в хвост!
+        </p>
+
+        <div class="panel panel--controls">
+          <label class="field">
+            <span>Скорость плавания</span>
+            <select id="speed-select" aria-label="Уровень скорости">
+              <option value="chill">Спокойное течение</option>
+              <option value="normal" selected>Обычное</option>
+              <option value="turbo">Ураган!</option>
+            </select>
+          </label>
+          <button type="button" id="btn-start" class="btn btn--primary btn--start-wide">Старт!</button>
+        </div>
+
+        <div class="side-stats panel" aria-label="Счёт и рекорд">
+          <div class="stats stats--compact">
+            <div class="stat-bubble">Счёт<br /><strong id="score">0</strong></div>
+            <div class="stat-bubble">Рекорд<br /><strong id="best">0</strong></div>
+          </div>
+        </div>
+
+        <section class="records" aria-labelledby="records-title">
+          <h2 id="records-title">Трофеи на стене</h2>
+          <ol id="records-list" class="records__list"></ol>
+          <button type="button" id="btn-clear-records" class="btn btn--ghost btn--small">Стереть таблицу</button>
+        </section>
+      </aside>
+
+      <div class="layout-game" id="layout-game">
+        <div class="game-stage" id="game-stage">
+          <div class="canvas-wrap">
+            <canvas id="game" aria-label="Игровое поле змейки"></canvas>
+            <div id="overlay" class="overlay hidden">
+              <p id="overlay-text" class="overlay__text"></p>
+              <button type="button" id="btn-overlay" class="btn btn--primary btn--overlay-big">Играть</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сапёр — мини-игра</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <div class="app">
+    <div class="layout-main">
+      <aside class="layout-sidebar">
+        <header class="header">
+          <h1>Сапёр</h1>
+        </header>
+
+        <p class="hint hint--rules">
+          <strong>Левый клик</strong> — открыть клетку ·
+          <strong>Правый клик</strong> — флаг ·
+          открой все клетки без мин
+        </p>
+
+        <div class="panel panel--controls">
+          <label class="field">
+            <span>Размер поля</span>
+            <select id="difficulty-select" aria-label="Сложность">
+              <option value="easy">Лёгкий 8×8</option>
+              <option value="normal" selected>Обычный 9×9</option>
+              <option value="hard">Сложный 12×12</option>
+            </select>
+          </label>
+          <button type="button" id="btn-new" class="btn btn--primary btn--start-wide">Новая игра</button>
+        </div>
+
+        <div class="side-stats panel" aria-label="Статистика">
+          <div class="stats stats--compact">
+            <div class="stat-bubble">Мины<br /><strong id="mines-left">0</strong></div>
+            <div class="stat-bubble">Время<br /><strong id="timer">0</strong></div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="layout-game" id="layout-game">
+        <div class="game-stage">
+          <div class="board-outer">
+            <p id="message" class="message" aria-live="polite"></p>
+            <div id="board" class="board" role="grid" aria-label="Поле сапёра"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

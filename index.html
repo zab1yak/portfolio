@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Денис Гончаров — студент ПГНИУ (ПМИ), Python, Telegram-боты, веб. Пермь." />
+  <meta name="description" content="Денис Гончаров — студент ПГНИУ (ПМИ), веб, браузерные игры, Python, боты. Пермь." />
   <title>Денис Гончаров — портфолио</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -94,7 +94,7 @@
           <span class="hero__hi" data-i18n="heroHi">Привет, я</span>
           <span class="hero__name" data-i18n="heroName">Денис Гончаров</span>
         </h1>
-        <p class="hero-typewriter reveal is-visible" id="hero-typewriter" data-i18n="heroTypewriter">Пишу боты, сайты и скрипты.</p>
+        <p class="hero-typewriter reveal is-visible" id="hero-typewriter" data-i18n="heroTypewriter">Пишу боты, сайты, браузерные игры и скрипты.</p>
         <p class="hero__lead reveal is-visible" data-i18n-html="heroLead">
           Студент направления <strong>«Прикладная математика и информатика»</strong> (экономический факультет).
           Разрабатываю <strong>Telegram-ботов</strong>, <strong>сайты</strong> и учусь превращать идеи в рабочий код.
@@ -174,57 +174,151 @@
       <div class="section__inner">
         <h2 class="section__title reveal" data-i18n="projectsTitle">Проекты</h2>
         <p class="section__subtitle reveal" data-i18n="projectsSubtitle">
-          Открытые репозитории на GitHub и учебные работы — по мере появления демо можно добавлять ссылки «Live».
+          Браузерные игры на чистом HTML, CSS и JavaScript — каждая в своём репозитории с README. Демо через GitHub Pages.
         </p>
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-card__meta" data-i18n="projMovieMeta">Python · Telegram</div>
-            <h3 class="project-card__title">movie_bot</h3>
-            <p class="project-card__desc" data-i18n="projMovieDesc">
-              Бот в Telegram: подбор фильма по жанрам или настроению. Практика с API и логикой сценариев.
-            </p>
-            <div class="project-card__links">
-              <a class="link-arrow" href="https://github.com/zab1yak/movie_bot" target="_blank" rel="noopener noreferrer" data-i18n="projMovieLink">Код на GitHub</a>
+
+        <div class="projects-showcase">
+          <article class="project-showcase reveal">
+            <div class="project-showcase__visual">
+              <div class="project-showcase__frame project-showcase__frame--mines">
+                <div class="project-preview project-preview--mines" aria-hidden="true">
+                  <div class="pp-mines">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span class="pp-mines__open">1</span><span class="pp-mines__open"></span
+                    ><span class="pp-mines__open">2</span><span></span>
+                    <span></span><span class="pp-mines__open"></span><span class="pp-mines__open">1</span
+                    ><span class="pp-mines__open">1</span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-showcase__panel">
+              <div class="project-showcase__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>
+              </div>
+              <p class="project-showcase__meta" data-i18n="projMineMeta">HTML · CSS · JavaScript</p>
+              <h3 class="project-showcase__title" data-i18n="projMineTitle">Сапёр</h3>
+              <p class="project-showcase__text" data-i18n="projMineDesc">
+                Классическое поле с минами: три сложности, таймер, флаги, безопасный первый ход. Логика на чистом JS.
+              </p>
+              <nav class="project-showcase__actions" aria-label="Сапёр — ссылки">
+                <a
+                  class="project-showcase__link"
+                  href="https://zab1yak.github.io/minesweeper-game/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projLinkLive"
+                  >Играть online</a
+                >
+                <a
+                  class="project-showcase__link project-showcase__link--secondary"
+                  href="https://github.com/zab1yak/minesweeper-game"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projLinkCode"
+                  >Код на GitHub</a
+                >
+              </nav>
             </div>
           </article>
-          <article class="project-card reveal">
-            <div class="project-card__meta" data-i18n="projAttMeta">ПГНИУ · Команда</div>
-            <h3 class="project-card__title" data-i18n="projAttTitle">Учёт посещаемости</h3>
-            <p class="project-card__desc" data-i18n="projAttDesc">
-              Приложение для университета совместно с однокурсниками: учёт и организация данных о посещениях.
-            </p>
-            <div class="project-card__links">
-              <span class="project-card__muted" data-i18n="projAttMuted">Репозиторий не публиковался</span>
+
+          <article class="project-showcase reveal">
+            <div class="project-showcase__visual">
+              <div class="project-showcase__frame project-showcase__frame--snake">
+                <div class="project-preview project-preview--snake" aria-hidden="true">
+                  <div class="pp-snake">
+                    <span class="pp-snake__dot"></span>
+                    <span class="pp-snake__dot"></span>
+                    <span class="pp-snake__dot"></span>
+                    <span class="pp-snake__dot pp-snake__dot--head"></span>
+                    <span class="pp-snake__food"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-showcase__panel">
+              <div class="project-showcase__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M4 12c2-4 6-6 10-4s6 6 6 10M8 8c1.5-1 3.5-1 5 0M14 16c-1 2-3 3-5 2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <p class="project-showcase__meta" data-i18n="projSnakeMeta">Canvas · JavaScript</p>
+              <h3 class="project-showcase__title" data-i18n="projSnakeTitle">Змейка</h3>
+              <p class="project-showcase__text" data-i18n="projSnakeDesc">
+                Плавная змейка на canvas: счёт, лучший результат в localStorage, аккуратный UI на русском.
+              </p>
+              <nav class="project-showcase__actions" aria-label="Змейка — ссылки">
+                <a
+                  class="project-showcase__link"
+                  href="https://zab1yak.github.io/snake-game/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projLinkLive"
+                  >Играть online</a
+                >
+                <a
+                  class="project-showcase__link project-showcase__link--secondary"
+                  href="https://github.com/zab1yak/snake-game"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projLinkCode"
+                  >Код на GitHub</a
+                >
+              </nav>
             </div>
           </article>
-          <article class="project-card reveal">
-            <div class="project-card__meta" data-i18n="projDominoMeta">C++ · Учёба</div>
-            <h3 class="project-card__title">domino</h3>
-            <p class="project-card__desc" data-i18n="projDominoDesc">
-              Итоговая работа по курсу «Алгоритмизация и программирование» — логика и структура кода на C++.
-            </p>
-            <div class="project-card__links">
-              <a class="link-arrow" href="https://github.com/zab1yak/domino" target="_blank" rel="noopener noreferrer" data-i18n="projMovieLink">Код на GitHub</a>
+
+          <article class="project-showcase reveal">
+            <div class="project-showcase__visual">
+              <div class="project-showcase__frame project-showcase__frame--astro">
+                <div class="project-preview project-preview--astro" aria-hidden="true">
+                  <div class="pp-astro">
+                    <span class="pp-astro__ship"></span>
+                    <span class="pp-astro__rock"></span>
+                    <span class="pp-astro__rock pp-astro__rock--s"></span>
+                    <span class="pp-astro__rock pp-astro__rock--xs"></span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </article>
-          <article class="project-card reveal">
-            <div class="project-card__meta" data-i18n="projGdMeta">Практика</div>
-            <h3 class="project-card__title">GreenData</h3>
-            <p class="project-card__desc" data-i18n="projGdDesc">
-              Учебная практика в компании — знакомство с корпоративной разработкой и процессами.
-            </p>
-            <div class="project-card__links">
-              <span class="project-card__creative" data-i18n="projGdNote">Опыт «изнутри» — без витрины кода, зато с пониманием, как всё устроено в проде.</span>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <div class="project-card__meta" data-i18n="projPortMeta">Веб · этот сайт</div>
-            <h3 class="project-card__title" data-i18n="projPortTitle">Портфолио</h3>
-            <p class="project-card__desc" data-i18n="projPortDesc">
-              Статическая вёрстка: адаптив, тёмная/светлая тема, анимации и интерактив в духе референсов.
-            </p>
-            <div class="project-card__links">
-              <a class="link-arrow" href="https://github.com/zab1yak/my-profile" target="_blank" rel="noopener noreferrer" data-i18n="projPortLink">Профиль README</a>
+            <div class="project-showcase__panel">
+              <div class="project-showcase__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2l2 6 6 1-6 4 2 6-6-3-6 3 2-6-6-4 6-1 2-6z" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="project-showcase__meta" data-i18n="projAstMeta">Canvas · JavaScript</p>
+              <h3 class="project-showcase__title" data-i18n="projAstTitle">Астероиды</h3>
+              <p class="project-showcase__text" data-i18n="projAstDesc">
+                Аркада: корабль, стрельба, волны астероидов, усложнение и игровые механики на JS.
+              </p>
+              <nav class="project-showcase__actions" aria-label="Астероиды — ссылки">
+                <a
+                  class="project-showcase__link"
+                  href="https://zab1yak.github.io/asteroids-game/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projLinkLive"
+                  >Играть online</a
+                >
+                <a
+                  class="project-showcase__link project-showcase__link--secondary"
+                  href="https://github.com/zab1yak/asteroids-game"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="projLinkCode"
+                  >Код на GitHub</a
+                >
+              </nav>
             </div>
           </article>
         </div>
